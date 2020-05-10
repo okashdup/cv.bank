@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+
+header {
+    width: 95%;
+    border-radius: 5px;
+    background: rgb(22, 22, 22);
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+header ul {
+    width: 90%;
+    margin: auto;
+}
+
+header li {
+    text-align: center;
+    display: inline-block;
+    padding: 15px;
+    padding-right: 15px;
+    margin-left: 8%;
+    cursor: pointer;
+}
+
+div#main {
+    width: 95%;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: grid;
+}
+
+div#user {
+    background: rgb(36, 36, 36);
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    text-align: center;
+    border: 10px solid  rgb(45, 45, 45);
+    background-image: url();
+}
+
+div#intro {
+    /* background: rgb(22, 22, 22); */
+    background: rgb(34, 34, 34);
+    height: 80vh;
+    width: 30%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+div#intro-desc {
+    position: relative;
+    top: 20%;
+    margin: auto;
+    width: 80%;
+}
+
+#intro-desc button {
+    border-radius: 15px;
+    width: 150px;
+    height: 35px;
+    border: none;
+    background: rgb(74, 66, 87);
+    color: #fff;
+    cursor: pointer;
+}
+
+
+div#content {
+    /* background: rgb(22, 22, 22); */
+    background: rgb(34, 34, 34);
+    height: 80vh;
+    width: 65%;
+    position: absolute;
+    right: 3%;
+    top:16%;
+    border-radius: 5px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+.ist-half, .second-half {
+    padding: 5px;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+section {
+    animation-timing-function: ease-in;
+    animation-name: slideInLeft;
+    animation-duration: 4s;
+    animation-delay: -1s;
+}
+
+section ul {
+    position: relative;
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+section h2 {
+    margin-top: 8%;
+    margin-left: 10%;
+}
+
+
+  /* #pull-lever {
+      margin-top: 40px !important;
+      margin: auto;
+      width: 100px;
+      height: 65px;
+      background-color: rgb(20, 20, 20);
+      touch-action: none;
+      user-select: none;
+      z-index: 0;
+      border-radius: 50%;
+    } */
+    
+    #item {
+    display: none;
+    cursor: all-scroll;
+    position: absolute;
+    width: 95%;
+    height: 20vh;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(20, 20, 20);
+    touch-action: none;
+    user-select: none;
+    z-index: 99;
+    background-image: url("../images/pull-handle.png");
+    background-repeat: no-repeat;
+    background-position: 50% 150%;
+  }
+
+
+  @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        margin-left: 5.5%;
+        z-index: -1;
+      }
+
+      to {
+          opacity: 1;
+          margin-left: 5%;
+          z-index: 0;
+      }
+  }
